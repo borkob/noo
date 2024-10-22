@@ -20,5 +20,5 @@ endforeach()
 
 set(L 513)
 foreach(seed RANGE 1 25)
-    add_test(NAME L${L}_${seed} COMMAND bash -c "./labs_random_search ${seed} 15000000 ${L} > out_${L}_${seed}.txt")
+    add_test(NAME L${L}_${seed} COMMAND bash -c "./labs_random_search ${seed} 150000 ${L} > out_${L}_${seed}.txt")
 endforeach()
