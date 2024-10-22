@@ -140,24 +140,7 @@ LABS LABS::neighborhood_search_e(const size_t seed, const size_t n, const size_t
     size_t nfes=0, best_neighbor;
     int best_neighbor_e, e;
     while(nfes < n){
-        best_neighbor_e = numeric_limits<int>::max();
-        for(size_t i=0; i<L; i++){
-            e = current.neighbor_e(i);
-            if(e < best_neighbor_e){
-                best_neighbor = i;
-                best_neighbor_e = e;
-            }
-        }
-        nfes+=L;
-        if(best_neighbor_e >= current.get_e()){
-            current.random(rand);
-            current.evaluate_e();
-            nfes++;
-        }
-        else{
-            current.update_e(best_neighbor,best_neighbor_e);
-        }
-        if(current.get_e() < best.get_e()) best = current;
+	    // ???
     }
     return best;
 }
@@ -171,24 +154,7 @@ LABS LABS::neighborhood_search_psl(const size_t seed, const size_t n, const size
     size_t nfes=0, best_neighbor;
     int best_neighbor_psl, psl;
     while(nfes < n){
-        best_neighbor_psl = numeric_limits<int>::max();
-        for(size_t i=0; i<L; i++){
-            psl = current.neighbor_psl(i);
-            if(psl < best_neighbor_psl){
-                best_neighbor = i;
-                best_neighbor_psl = psl;
-            }
-        }
-        nfes+=L;
-        if(best_neighbor_psl >= current.get_psl()){
-            current.random(rand);
-            current.evaluate_psl();
-            nfes++;
-        }
-        else{
-            current.update_psl(best_neighbor,best_neighbor_psl);
-        }
-        if(current.get_psl() < best.get_psl()) best = current;
+	    // ???
     }
     return best;
 }
